@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+        
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        textarea,
+        input[type="file"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Job Application</h1>
+    <form action="submit_application.php" method="post">
+        <!-- Personal Information -->
+        <h2>Personal Information</h2>
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Job Specific Information -->
+        <h2>Job Specific Information</h2>
+        <label for="position">Position Applying For:</label>
+        <input type="text" id="position" name="position" required>
+
+        <label for="resume">Upload Resume (PDF or Word):</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+
+        <label for="cover_letter">Cover Letter:</label><br>
+        <textarea id="cover_letter" name="cover_letter" rows="4" required></textarea>
+
+        <!-- Education History -->
+        <h2>Education History</h2>
+        <label for="degree">Degree Earned:</label>
+        <input type="text" id="degree" name="degree" required>
+
+        <label for="university">University/College:</label>
+        <input type="text" id="university" name="university" required>
+
+        <label for="graduation_year">Year of Graduation:</label>
+        <input type="text" id="graduation_year" name="graduation_year" required>
+
+        <!-- Work Experience -->
+        <h2>Work Experience</h2>
+        <label for="previous_job">Previous Job Title:</label>
+        <input type="text" id="previous_job" name="previous_job" required>
+
+        <label for="years_of_experience">Years of Experience:</label>
+        <input type="number" id="years_of_experience" name="years_of_experience" required>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit Application">
+    </form>
+</body>
+</html>
